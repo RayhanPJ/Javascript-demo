@@ -10,7 +10,8 @@
 // Nomer 1
 
 //Psudocode
-// input: i, a, jam, menit, detik
+// input: i, a, jam, menit, detik;
+// i = 15436;
 // a = i % 3600;
 // jam = i / 3600;
 // menit = a / 60;
@@ -34,8 +35,8 @@
 // Nomer 2
 
 //Psudocode
-// input : i = [2, 4, 8, 10, 20, 22, 44]
-// input : x
+// input : i = [2, 4, 8, 10, 20, 22, 44];
+// input : x;
 // for (x = 0; x < i - 1; x++) {
 //     print : i[x] , i[x + 1], (i[x + 1] - i[x]));
 // }
