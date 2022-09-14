@@ -67,28 +67,171 @@
 // Nomer 2
 // function Nilai(nilai) {
 //     switch (true) {
-//         case 91 <= nilai && nilai <= 100:
+//         case nilai >= 91 && nilai <= 100:
 //             console.log("A");
 //             break;
-//         case 81 <= nilai && nilai <= 90:
+//         case nilai >= 81 && nilai <= 90:
 //             console.log("B");
 //             break;
-//         case 71 <= nilai && nilai <= 80:
+//         case nilai >= 71 && nilai <= 80:
 //             console.log("C");
 //             break;
-//         case 61 <= nilai && nilai <= 70:
+//         case nilai >= 61 && nilai <= 70:
 //             console.log("D");
 //             break;
 //         case nilai <= 60:
 //             console.log("E");
-//         default:
-//             console.log("HOHOHO");
+//             break;
+//         case nilai >= 101:
+//             console.log("Rank Undifine");
 //     }
 // }
-// Nilai(85);
+// Nilai(100);
 
-let i = 0;
-while (i <= 10) {
-    console.log("Angkot No.", i + " beroperasi dengan baik.");
-    i++;
+// let i = 0;
+// while (i <= 10) {
+//     console.log("Angkot No.", i + " beroperasi dengan baik.");
+//     i++;
+// }
+
+// let person = { name: "Sabrina", age: 21, ktp: "1234562" };
+// let fruits = ["Mango", "Apple", "Orange"];
+
+// person.name = "Agus";
+// person.age = 32;
+// delete person.ktp;
+// let check = "ktp" in person;
+// console.log(person.name, check ? "Has KTP" : "Doesn't KTP");
+
+// const maxFloor = 3;
+// let floor = 1;
+
+// function getRondomInt(min, max) {
+//     min = Math.ceil(min);
+//     max = Math.floor(max);
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+
+// while (floor <= maxFloor) {
+//     let isSpotless = false;
+//     console.log("Ngepel lantai", floor);
+//     let godsWill = getRondomInt(0, 1);
+//     if (godsWill === 0) isSpotless = true;
+//     if (isSpotless) floor++;
+// }
+
+// const rumusPersegi = (size) => {
+//     return size * size;
+// };
+// const persegi = rumusPersegi(4);
+// console.log(persegi);
+
+// function solution(x, y) {
+//     if (x % 5 === 0 && y >= x + 0.5) {
+//         return y - (x + 0.5);
+//     }
+// }
+// console.log(solution(40, 100));
+
+// function sumDigits(number) {
+//     let sum = 0;
+//     let str = number.toString();
+//     for (let i = 0; i < str.length; i++) {
+//         sum += parseInt(str[i]);
+//     }
+//     return sum;
+// }
+
+// console.log(sumDigits(123));
+// console.log(sumDigits(1234));
+
+// function sayHiTo(name) {
+//     let halo = "Hi " + name.toUpperCase() + " !";
+//     return halo;
+// }
+
+// let test1 = sayHiTo("everything");
+// console.log(test1);
+
+// function volTabung(r, t) {
+//     return 3.14 * r ** 2 * t;
+// }
+// console.log("Vol Tabung : ", volTabung(10, 4));
+
+// const strArray = ["JavaScript", "Java", "C"];
+
+// function forEach(array, callback) {
+//     const newArray = [];
+//     for (let i = 0; i < array.length; i++) {
+//         newArray.push(callback(array[i]));
+//     }
+//     return newArray;
+// }
+
+// const lenArray = forEach(strArray, (item) => {
+//     return item.length;
+// });
+// console.log(lenArray);
+
+class bangunDatar {
+    constructor(panjang, lebar) {
+        this.panjang = panjang;
+        this.lebar = lebar;
+    }
+
+    Luas() {
+        console.log(this.panjang * this.lebar);
+    }
 }
+
+let bangun = new bangunDatar(2, 2);
+
+class persegiPanjang extends bangunDatar {
+    constructor(panjang, lebar) {
+        super(panjang, lebar);
+    }
+
+    Luas() {
+        super.Luas();
+    }
+
+    Keliling() {
+        console.log(2 * (this.panjang + this.lebar));
+    }
+}
+
+class Persegi extends bangunDatar {
+    constructor(panjang, lebar) {
+        super(panjang, lebar);
+    }
+
+    Keliling() {
+        console.log(4 * this.panjang);
+    }
+}
+
+class Segitiga extends bangunDatar {
+    constructor(panjang, lebar, tinggi) {
+        super(panjang, lebar);
+        this.tinggi = tinggi;
+    }
+
+    Luas() {
+        console.log((1 / 2) * this.panjang * this.tinggi);
+    }
+
+    Keliling() {
+        console.log(this.panjang + this.lebar + this.tinggi);
+    }
+}
+
+let pPanjang = new persegiPanjang(2, 2);
+let persegi = new Persegi(2, 2);
+let segiTiga = new Segitiga(2, 2, 2);
+
+pPanjang.Luas();
+pPanjang.Keliling();
+persegi.Luas();
+persegi.Keliling();
+segiTiga.Luas();
+segiTiga.Keliling();
