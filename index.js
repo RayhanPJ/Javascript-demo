@@ -173,65 +173,80 @@
 // });
 // console.log(lenArray);
 
-class bangunDatar {
-    constructor(panjang, lebar) {
-        this.panjang = panjang;
-        this.lebar = lebar;
-    }
+// class bangunDatar {
+//     constructor(panjang, lebar) {
+//         this.panjang = panjang;
+//         this.lebar = lebar;
+//     }
 
-    Luas() {
-        console.log(this.panjang * this.lebar);
+//     Luas() {
+//         console.log(this.panjang * this.lebar);
+//     }
+// }
+
+// let bangun = new bangunDatar(2, 2);
+
+// class persegiPanjang extends bangunDatar {
+//     constructor(panjang, lebar) {
+//         super(panjang, lebar);
+//     }
+
+//     Luas() {
+//         super.Luas();
+//     }
+
+//     Keliling() {
+//         console.log(2 * (this.panjang + this.lebar));
+//     }
+// }
+
+// class Persegi extends bangunDatar {
+//     constructor(panjang, lebar) {
+//         super(panjang, lebar);
+//     }
+
+//     Keliling() {
+//         console.log(4 * this.panjang);
+//     }
+// }
+
+// class Segitiga extends bangunDatar {
+//     constructor(panjang, lebar, tinggi) {
+//         super(panjang, lebar);
+//         this.tinggi = tinggi;
+//     }
+
+//     Luas() {
+//         console.log((1 / 2) * this.panjang * this.tinggi);
+//     }
+
+//     Keliling() {
+//         console.log(this.panjang + this.lebar + this.tinggi);
+//     }
+// }
+
+// let pPanjang = new persegiPanjang(2, 2);
+// let persegi = new Persegi(2, 2);
+// let segiTiga = new Segitiga(2, 2, 2);
+
+// pPanjang.Luas();
+// pPanjang.Keliling();
+// persegi.Luas();
+// persegi.Keliling();
+// segiTiga.Luas();
+// segiTiga.Keliling();
+
+function temperatureConverter() {
+    var Num = document.getElementById("inputCelsius").value;
+    if (Num == "") {
+        alert("Tidak boleh kosong");
+    } else {
+        document.getElementById("outputFahrenheit").innerHTML = Math.ceil(Num * 1.8 + 32);
+        document.getElementById("outputKelvin").innerHTML = Math.ceil(Num + 273.15);
+        document.getElementById("outputReamur").innerHTML = Math.ceil(Num * (4 / 5));
     }
 }
 
-let bangun = new bangunDatar(2, 2);
-
-class persegiPanjang extends bangunDatar {
-    constructor(panjang, lebar) {
-        super(panjang, lebar);
-    }
-
-    Luas() {
-        super.Luas();
-    }
-
-    Keliling() {
-        console.log(2 * (this.panjang + this.lebar));
-    }
+function formReset() {
+    document.getElementById("frm1").reset("");
 }
-
-class Persegi extends bangunDatar {
-    constructor(panjang, lebar) {
-        super(panjang, lebar);
-    }
-
-    Keliling() {
-        console.log(4 * this.panjang);
-    }
-}
-
-class Segitiga extends bangunDatar {
-    constructor(panjang, lebar, tinggi) {
-        super(panjang, lebar);
-        this.tinggi = tinggi;
-    }
-
-    Luas() {
-        console.log((1 / 2) * this.panjang * this.tinggi);
-    }
-
-    Keliling() {
-        console.log(this.panjang + this.lebar + this.tinggi);
-    }
-}
-
-let pPanjang = new persegiPanjang(2, 2);
-let persegi = new Persegi(2, 2);
-let segiTiga = new Segitiga(2, 2, 2);
-
-pPanjang.Luas();
-pPanjang.Keliling();
-persegi.Luas();
-persegi.Keliling();
-segiTiga.Luas();
-segiTiga.Keliling();
