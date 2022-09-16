@@ -250,3 +250,20 @@ function temperatureConverter() {
 function formReset() {
     document.getElementById("frm1").reset("");
 }
+
+function getTextColor() {
+    let textColor = document.getElementById("inputTextColor").value;
+    document.getElementById("textColor").style.color = textColor;
+}
+
+function getBGColor() {
+    let BGColor = document.getElementById("inputBGColor").value;
+    document.body.style.background = BGColor;
+}
+
+function getLinkColor() {
+    let linkColor = document.getElementById("inputLinkColor").value;
+    document.getElementById("linkColor").style.color = linkColor;
+}
+
+// let bgColor = (document.getElementById("bgColor").style.color = warna);
