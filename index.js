@@ -265,5 +265,3 @@ function getLinkColor() {
     let linkColor = document.getElementById("inputLinkColor").value;
     document.getElementById("linkColor").style.color = linkColor;
 }
-
-// let bgColor = (document.getElementById("bgColor").style.color = warna);
