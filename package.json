@@ -1,0 +1,25 @@
+{
+    "name": "git-hub",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RayhanPJ/Javascript-demo.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/RayhanPJ/Javascript-demo/issues"
+    },
+    "homepage": "https://github.com/RayhanPJ/Javascript-demo#readme",
+    "dependencies": {
+        "nodemon": "^2.0.20"
+    },
+    "devDependencies": {
+        "chalk": "^5.0.1"
+    }
+}

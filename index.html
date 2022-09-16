@@ -28,16 +28,34 @@
             <div class="col-md-4" id="bgColor">
                 <h1 class="mb-4">Color Picker</h1>
                 <h3>Text:</h3>
-                <input class="mb-3" id="inputTextColor" type="color" value="#ff1a1a" /> <br>
+                <input class="mb-3" id="inputTextColor" type="color" value="#ffffff" /> <br>
+                <select onchange="dColorPic1()" id="select_id1">
+                    <option>-Select Color-</option>
+                    <option value="#ff0000">Merah</option>
+                    <option value="#000000">Hitam</option>
+                    <option value="#ffffff">Putih</option>
+                </select>
                 <button onclick="getTextColor()">Get Color</button>
                 <p id="textColor">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis neque accusantium, voluptatem corrupti iure quia id explicabo. Eaque, explicabo deserunt?</p>
                 <h3 class="mb-4">Background Color:</h3>
                 <input class="mb-3" id="inputBGColor" type="color" value="#ffffff" /> <br>
+                <select onchange="dColorPic2()" id="select_id2">
+                    <option>-Select Color-</option>
+                    <option value="#00ff00">Hijau</option>
+                    <option value="#0000ff">Biru</option>
+                    <option value="#ffffff">Putih</option>
+                </select>
                 <button onclick="getBGColor()">Get Color</button>
                 <h3 class="mt-4">Link Color:</h3>
+                <a href="#" id="linkColor">Text Link</a> <br>
                 <input class="mb-3" id="inputLinkColor" type="color" value="#ffffff" /> <br>
+                <select onchange="dColorPic3()" id="select_id3">
+                    <option>-Select Color-</option>
+                    <option value="#ff0000">Merah</option>
+                    <option value="#000000">Hitam</option>
+                    <option value="#ffffff">Putih</option>
+                </select>
                 <button onclick="getLinkColor()">Get Color</button>
-                <a href="#" id="linkColor">Text Link</a>
             </div>
             <div class="col-md"></div>
         </div>

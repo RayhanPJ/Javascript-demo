@@ -236,32 +236,64 @@
 // segiTiga.Luas();
 // segiTiga.Keliling();
 
-function temperatureConverter() {
-    var Num = document.getElementById("inputCelsius").value;
-    if (Num == "") {
-        alert("Tidak boleh kosong");
-    } else {
-        document.getElementById("outputFahrenheit").innerHTML = Math.ceil(Num * 1.8 + 32);
-        document.getElementById("outputKelvin").innerHTML = Math.ceil(Num + 273.15);
-        document.getElementById("outputReamur").innerHTML = Math.ceil(Num * (4 / 5));
-    }
-}
+// function temperatureConverter() {
+//     var Num = document.getElementById("inputCelsius").value;
+//     if (Num == "") {
+//         alert("Tidak boleh kosong");
+//     } else {
+//         document.getElementById("outputFahrenheit").innerHTML = Math.ceil(Num * 1.8 + 32);
+//         document.getElementById("outputKelvin").innerHTML = Math.ceil(Num + 273.15);
+//         document.getElementById("outputReamur").innerHTML = Math.ceil(Num * (4 / 5));
+//     }
+// }
 
-function formReset() {
-    document.getElementById("frm1").reset("");
-}
+// function formReset() {
+//     document.getElementById("frm1").reset("");
+// }
 
-function getTextColor() {
-    let textColor = document.getElementById("inputTextColor").value;
-    document.getElementById("textColor").style.color = textColor;
-}
+// //Color Pallete Pick
+// function getTextColor() {
+//     let textColor = document.getElementById("inputTextColor").value;
+//     document.getElementById("textColor").style.color = textColor;
+// }
 
-function getBGColor() {
-    let BGColor = document.getElementById("inputBGColor").value;
-    document.body.style.background = BGColor;
-}
+// function getBGColor() {
+//     let BGColor = document.getElementById("inputBGColor").value;
+//     document.body.style.background = BGColor;
+// }
 
-function getLinkColor() {
-    let linkColor = document.getElementById("inputLinkColor").value;
-    document.getElementById("linkColor").style.color = linkColor;
-}
+// function getLinkColor() {
+//     let linkColor = document.getElementById("inputLinkColor").value;
+//     document.getElementById("linkColor").style.color = linkColor;
+// }
+
+// //Selec Option Color
+// function dColorPic1() {
+//     let d = document.getElementById("select_id1").value;
+//     document.getElementById("textColor").style.color = d;
+// }
+
+// function dColorPic2() {
+//     let d = document.getElementById("select_id2").value;
+//     document.body.style.background = d;
+// }
+
+// function dColorPic3() {
+//     let d = document.getElementById("select_id3").value;
+//     document.getElementById("linkColor").style.color = d;
+// }
+
+const os = require("os");
+const fs = require("fs");
+const isi = fs.readFileSync("./text.txt", "utf-8");
+const segitia = require("./segitiga");
+const create = require("./create.js");
+const sabrina = require("./person.json");
+
+fs.writeFileSync("./text.txt", "sekarang jadi halo");
+
+console.log(create);
+console.log(sabrina);
+console.log(isi);
+console.log(segitia(5, 8));
+console.log("Free Memory: ", os.freemem());
